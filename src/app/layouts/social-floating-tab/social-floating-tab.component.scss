@@ -1,0 +1,41 @@
+.elegance-social-bar {
+    padding: 0;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 199;
+}
+
+.elegance-social-icons {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.elegance-social-icons li {
+    display: block;
+    margin: 1px 0px;
+}
+
+.elegance-social-icons li a {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.elegance-social-icons li a:hover {
+    color: #1e1e1e;
+    background-color: #fff;
+}
+
+.elegance-social-icons li a svg {
+    max-height: 36px;
+}

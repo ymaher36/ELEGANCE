@@ -1,0 +1,26 @@
+@for (toast of toastService.toasts; track $index) {
+<ngb-toast [delay]="toast.delayInSeconds!*1000 || 5000" (hidden)="toastService.remove(toast)" [ngClass]="backgroundColor(toast.type)" >
+    <div class="d-flex align-items-center ">
+        <div class="me-2">
+            @switch (toast.type) {
+            @case ("success") {
+            <div class="me-2">
+                <fa-icon [icon]="successIcon" size="xl"></fa-icon>
+            </div>
+            }
+            @case ("info") {
+            <fa-icon [icon]="infoIcon" size="xl"></fa-icon>
+            }
+            @case ("warning") {
+            <fa-icon [icon]="warningIcon" size="xl"></fa-icon>
+            }
+            @case ("error") {
+            <fa-icon [icon]="errorIcon" size="xl"></fa-icon>
+            }
+            }
+        </div>
+        <strong class="mx-1">{{toast.text}}</strong>
+        <button type="button" class="btn-close ms-auto" (click)="toastService.remove(toast)"></button>
+    </div>
+</ngb-toast>
+}
